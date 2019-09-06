@@ -3,9 +3,9 @@ package mentoringtemporaryhomesorganizer;
 public class CooperatingVets {
 
     String clinicName;
-    boolean treatsAllSpecies;
+    boolean treatingAllSpecies;
     String location;
     double standardTreatmentPrice;
-    boolean worksWithLocalAuthorities; //to oznacza czesc uslug jest za darmo
+    boolean workingWithLocalAuthorities; //to oznacza czesc uslug jest za darmo
 
 }

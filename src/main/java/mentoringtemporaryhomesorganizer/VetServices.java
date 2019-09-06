@@ -7,4 +7,3 @@ public class VetServices {
     String opinion; // referencje??
 
 }
-/Users/karolina.kocon/Desktop/ud282-master/mentoring.temporary.home.organizer/src/main/java/mentoringtemporaryhomesorganizer

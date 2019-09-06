@@ -1,6 +1,6 @@
 package mentoringtemporaryhomesorganizer;
 
-public class PetLookingForHome {
+public class PetLookingForHome implements Pet {
 
     String name;
     double age;
