@@ -2,25 +2,20 @@ package mentoringtemporaryhomesorganizer;
 
 public class TemporaryHome implements Home {
 
-    String name;
-    boolean full;
-    int noOfDeclaredVacancies;
-    boolean goodOpinion;
-    boolean garden;
-    String address;
-    String id;
-    boolean smokingOwner;
-    int greenAreaDistance;
-    boolean netWindows;
-    //in case of cats
-    boolean awareOfPetCosts;
-    boolean followingAgreements;
+  String name;
+  boolean full;
+  int noOfDeclaredVacancies;
+  boolean goodOpinion;
+  boolean garden;
+  String address;
+  String id;
+  boolean smokingOwner;
+  int greenAreaDistance;
+  boolean netWindows;
+  boolean awareOfPetCosts;
+  boolean followingAgreements;
+  String acceptSpecies;
 
-//    smoking owners
-//            distance ffrom green arrea etc
-//    wypisac liste wymagan
-//
-    String acceptSpecies; //albo tak/nie czy akceptuje koty,psy etc, albo array?
-
+//TODO: KL: for next time: decide whether acceptSpecies is in the form of an array or other
 
 }
