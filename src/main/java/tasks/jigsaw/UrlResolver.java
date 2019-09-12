@@ -11,5 +11,5 @@ public interface UrlResolver {
 
   String generateImageUrlFromContext(String imagePath, Koutlet outlet, String protocol);
 
-  String generateImageUrlFromContext(String imagePath, boolean isDaznRequest, Koutlet outlet, String protocol);
+  String generateImageUrlFromContext(String imagePath, boolean isBRequest, Koutlet outlet, String protocol);
 }
