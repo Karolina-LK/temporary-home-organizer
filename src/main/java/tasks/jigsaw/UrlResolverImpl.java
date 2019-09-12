@@ -15,8 +15,8 @@ public class UrlResolverImpl implements UrlResolver {
     imagePredicates = unmodifiableList(asList(
         imagePath -> imagePath.startsWith(HTTP_URI_PROTOCOL_SCHEMA),
         imagePath -> imagePath.startsWith(HTTPS_URI_PROTOCOL_SCHEMA),
-        imagePath -> imagePath.contains(PERFORM_DOMAIN),
-        imagePath -> imagePath.contains(DAZN_DOMAIN)
+        imagePath -> imagePath.contains(A_DOMAIN),
+        imagePath -> imagePath.contains(B_DOMAIN)
     ));
   }
 
@@ -29,7 +29,7 @@ public class UrlResolverImpl implements UrlResolver {
   @Override
   public String generateImageUrlFromContext(
       final String imagePath,
-      final boolean isDaznRequest,
+      final boolean isBRequest,
       final Koutlet outlet,
       final String protocol
   ) {
@@ -38,8 +38,8 @@ public class UrlResolverImpl implements UrlResolver {
     }
 
     final String expectedDomain = Optional.ofNullable(outlet)
-        .map(o -> DEFAULT_IMAGE_DOMAIN.equals(o.getImagesDomain()) && isDaznRequest ? DAZN_IMAGE_DOMAIN : o.getImagesDomain())
-        .orElse(isDaznRequest ? DAZN_IMAGE_DOMAIN : DEFAULT_IMAGE_DOMAIN);
+        .map(o -> DEFAULT_IMAGE_A.equals(o.getImagesDomain()) && isBRequest ? B_IMAGE_DOMAIN : o.getImagesDomain())
+        .orElse(isBRequest ? B_IMAGE_DOMAIN : DEFAULT_IMAGE_A);
 
     if (imagePredicates.stream().anyMatch(predicate -> predicate.test(imagePath))) {
       return this.modifyImagePath(imagePath, expectedDomain, protocol);
@@ -49,7 +49,7 @@ public class UrlResolverImpl implements UrlResolver {
   }
 
   private String modifyImagePath(String imagePath, String expectedDomain, String protocol) {
-    if (imagePath.contains(DEFAULT_IMAGE_DOMAIN)) { //replaces any domain for the expected one
+    if (imagePath.contains(DEFAULT_IMAGE_A)) { //replaces any domain for the expected one
       imagePath = imagePath.replaceFirst("(\\w*\\.)+\\w+", expectedDomain);
     }
 
