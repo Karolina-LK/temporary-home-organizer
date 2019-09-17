@@ -1,4 +1,4 @@
-package mentoringtemporaryhomesorganizer;
+package com.dazn.temporary.home.organizer;
 
 public class PetLookingForHome implements Pet {
 
