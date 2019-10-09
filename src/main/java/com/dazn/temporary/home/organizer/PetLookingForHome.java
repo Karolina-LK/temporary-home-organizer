@@ -2,7 +2,7 @@ package com.dazn.temporary.home.organizer;
 
 public class PetLookingForHome {
 
-  private int id;
+  private Integer id;
   private String name;
   private double age;
   private String sex;
