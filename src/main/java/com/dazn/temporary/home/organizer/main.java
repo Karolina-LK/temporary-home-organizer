@@ -29,22 +29,25 @@ public class Main {
     return Optional.empty();
   }
 
-  public String findPetViaName(String name) {
+  public Optional<String>  findPetViaName(String name) {
 //    assuming the PLH are gathered in the  List<PetLookingForHome> pets,
 //    i should have pets.contains or pets.get combined with for or forEach loop
-    return STATEMENT;
+    System.out.println(STATEMENT);
+    return Optional.empty();
   }
 
-  public double findPetViaAge(double age) {
+  public Optional<Double> findPetViaAge(Double age) {
 //    assuming the PLH are gathered in the  List<PetLookingForHome> pets,
 //    i should have pets.contains or pets.get combined with for or forEach loop
-    return -1.0;
+    System.out.println(STATEMENT);
+    return Optional.empty();
   }
 
-  public String findPetViaSex(String sex) {
+  public Optional<String> findPetViaSex(String sex) {
 //    assuming the PLH are gathered in the  List<PetLookingForHome> pets,
 //    i should have pets.contains or pets.get combined with for or forEach loop
-    return STATEMENT;
+    System.out.println(STATEMENT);
+    return Optional.empty();
   }
 
 }
